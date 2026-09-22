@@ -4,6 +4,6 @@ export interface IHeroes {
     nombre:string;
     description:string;
     race:string;
-    ki:number;
+    ki:number
 
 }
