@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formularios</title>
+</head>
+<body>
+    <div>
+    <h3>INICIO DE SESIÓN</h3>
+    
+    <div>
+        <label for="usuario">Usuario: </label>
+        <input [(ngModel)]="usuario" name="usuario" type="text" id="usuario">
+    </div>
+
+    <div>
+        <label for="contra">Contraseña: </label>
+        <input [(ngModel)]="contra" name="contra" type="password" id="contra">
+    </div>
+
+    <button (click)="Acceso()" type="button">
+        Iniciar sesión
+    </button>
+
+    <h4>{{ mensaje }}</h4>
+</div>
+</body>
+</html>
