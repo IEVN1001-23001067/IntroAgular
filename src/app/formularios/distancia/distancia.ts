@@ -1,4 +1,4 @@
-/* import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-distancia',
@@ -7,16 +7,13 @@
   templateUrl: './distancia.html',
 })
 export class Distancia {
-  num1:string=''
-  num2:string=''
-  num3:string=''
-  num4:string=''
+  num1 = ''; 
+  num2 = ''; 
+  num3 = ''; 
+  num4 = ''; 
+  resultado = 0;
 
-  resultado:number=0
-  operacion: string = ''
-
-  formula():void{
-    this.resultado=parseInt(this.num1)*2}
-  
+  formula() {
+    this.resultado = Math.sqrt((+this.num3 - +this.num1)**2 + (+this.num4 - +this.num2)**2);
+  }
 }
- */
