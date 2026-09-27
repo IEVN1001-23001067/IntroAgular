@@ -10,9 +10,11 @@ import { Distancia } from './formularios/distancia/distancia'; */
 
 /*import { Areas } from './formularios/areas/areas'; */
 import { Usuarios } from './formularios/usuarios/usuarios';
+import { Cinepolis } from './formularios/cinepolis/cinepolis';
+import { Palindromo } from './formularios/palindromo/palindromo';
 
 @NgModule({
-  declarations: [App, Usuarios],
+  declarations: [App, Usuarios, Cinepolis, Palindromo],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
