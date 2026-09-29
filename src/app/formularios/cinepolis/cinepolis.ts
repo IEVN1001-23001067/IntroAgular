@@ -7,45 +7,50 @@ import { Component } from '@angular/core';
   templateUrl: './cinepolis.html',
 })
 export class Cinepolis {
-  /* nombre:string;
-  cantidad:string;
-  cineco:string;
+ 
+  nombre: string = "";
+  cantidadCompradores: number = 1;
+  cineco: string = "no";
+  cantidadBoletos: number = 1;
 
-  nombre="";
-  cantidad="";
+ 
+  valorPagar: number = 0;
 
-  nombreResultado:string;
-  cantidadResultado:number;
-  valorPagar:number;
-
-  nombreResultado="";
-  cantidadResultado=0;
-  valorpagar:0;
-
-  procesarComprar(){
-    if (!this.nombre.trim()) {
-      alert("Por favor ingrese el nombre.");
-      return;
-    }
-    if (this.cantidad > 7) {
-      alert("No se pueden comprar más de 7 boletas por persona.");
+  procesar() {
+    
+    if (this.cantidadCompradores < 1) {
+      alert("Debe haber al menos 1 comprador.");
       return;
     }
 
-    let precioUnitario = 12000;
-    let subtotal = this.cantidad * precioUnitario;
-    let descuentoCantidad = 0;
+    let limiteMaximoBoletos = this.cantidadCompradores * 7;
 
-    if (this.cantidad > 5) {
-      descuentoCantidad = 0.15; // 15%
-    } else if (this.cantidad >= 3 && this.cantidad <= 5) {
-      descuentoCantidad = 0.10; // 10%
-    } else {
-      descuentoCantidad = 0.0;  // Sin descuento (1 o 2 boletas)
+    if (this.cantidadBoletos > limiteMaximoBoletos) {
+      alert(`No se pueden comprar más de 7 boletas por persona. El límite para ${this.cantidadCompradores} comprador(es) es de ${limiteMaximoBoletos} boletos.`);
+      return;
     }
 
-    let valorConDescuento = subtotal - (subtotal * descuentoCantidad);
+    let total = this.cantidadBoletos * 12;
 
-  } */
+    if (this.cantidadBoletos > 5) {
+      total = total - (total * 0.15);
+    } else if (this.cantidadBoletos >= 3) {
+      total = total - (total * 0.10);
+    }
 
+    if (this.cineco === "si") {
+      total = total - (total * 0.10);
+    }
+
+    this.valorPagar = total;
+  }
+
+  salir() {
+   
+    this.nombre = "";
+    this.cantidadCompradores = 1;
+    this.cineco = "no";
+    this.cantidadBoletos = 1;
+    this.valorPagar = 0;
+  }
 }

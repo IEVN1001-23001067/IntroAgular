@@ -1,0 +1,183 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #112d78 0%, #08153b 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+}
+
+.contenedor-principal {
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    box-sizing: border-box;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-principal {
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+    color: #0d2163;
+    font-weight: 800;
+    padding: 10px;
+    font-size: 21px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    margin-bottom: 25px;
+    width: 320px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.secciones {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 20px;
+}
+
+.caja {
+    border: 1px solid rgba(107, 147, 235, 0.4);
+    padding: 22px;
+    flex: 1;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+legend {
+    font-style: italic;
+    color: #f7d63e;
+    padding: 0 10px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.campo {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #f1f5f9;
+    font-weight: 600;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 6px 12px;
+    border: 1px solid #94a3b8;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #0f172a;
+    height: 34px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: all 0.25s ease-in-out;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    outline: none;
+    border-color: #f7d63e;
+    box-shadow: 0 0 8px rgba(247, 214, 62, 0.6);
+}
+
+.radios {
+    display: flex;
+    gap: 30px;
+    font-size: 13px;
+    align-items: center;
+    height: 34px;
+}
+
+.radios label {
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.acciones {
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 60px;
+}
+
+.acciones div {
+    display: flex;
+    justify-content: center;
+    gap: 1000px; 
+}
+
+button {
+    background: linear-gradient(to bottom, #ffffff, #e2e8f0);
+    border: 1px solid #cbd5e1;
+    border-radius: 8px; 
+    padding: 10px 36px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #0f172a;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #ffffff, #cbd5e1);
+    border-color: #f7d63e; 
+    color: #0d2163;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.input-resultado {
+    font-weight: bold;
+    color: #0f172a;
+    background-color: #f1f5f9 !important;
+}
+
+.footer-cinepolis {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.footer-cinepolis h2 {
+    margin: 0;
+    color: #f7d63e; 
+    font-style: italic;
+    font-size: 36px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    letter-spacing: 1px;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.footer-cinepolis p {
+    margin: 4px 0 0 0;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #f1f5f9;
+    font-weight: bold;
+}
